@@ -1,0 +1,456 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390",
+  "files": [
+    "__original-animation-0.cconb",
+    "__original-animation-1.cconb",
+    "__original-animation-2.cconb",
+    "__original-animation-3.cconb",
+    "__original-animation-4.cconb",
+    "__original-animation-5.cconb",
+    "__original-animation-6.cconb",
+    "__original-animation-7.cconb",
+    "__original-animation-8.cconb",
+    "__original-animation-9.cconb"
+  ],
+  "subMetas": {
+    "28017": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@28017",
+      "displayName": "",
+      "id": "28017",
+      "name": "Armature|RingSqueeze.001.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.0416666679084301
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "c9c57": {
+      "importer": "gltf-mesh",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@c9c57",
+      "displayName": "",
+      "id": "c9c57",
+      "name": "Group11478.001.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cf63d": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@cf63d",
+      "displayName": "",
+      "id": "cf63d",
+      "name": "Armature|123.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.0416666679084301
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "d1493": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@d1493",
+      "displayName": "",
+      "id": "d1493",
+      "name": "Armature|ArmatureAction.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.0416666679084301
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "1dfaa": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@1dfaa",
+      "displayName": "",
+      "id": "1dfaa",
+      "name": "Armature|IndexSqueeze.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "bb332": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@bb332",
+      "displayName": "",
+      "id": "bb332",
+      "name": "Armature|MIddleSqueeze.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "4bf2d": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@4bf2d",
+      "displayName": "",
+      "id": "4bf2d",
+      "name": "Armature|PinkySqueeze.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "9ad4a": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@9ad4a",
+      "displayName": "",
+      "id": "9ad4a",
+      "name": "Armature|RingSqueeze.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "0ee4f": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@0ee4f",
+      "displayName": "",
+      "id": "0ee4f",
+      "name": "Armature|ThumbRot.animation",
+      "userData": {
+        "gltfIndex": 7,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "7ad54": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@7ad54",
+      "displayName": "",
+      "id": "7ad54",
+      "name": "Armature|ThumbSqueeze.animation",
+      "userData": {
+        "gltfIndex": 8,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "caaff": {
+      "importer": "gltf-animation",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@caaff",
+      "displayName": "",
+      "id": "caaff",
+      "name": "Armature|Wrist.animation",
+      "userData": {
+        "gltfIndex": 9,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.5
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 17
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2023": {
+      "importer": "gltf-scene",
+      "uuid": "a769b994-ac15-4034-a29f-7a2859ba4390@c2023",
+      "displayName": "",
+      "id": "c2023",
+      "name": "HandAnimated.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Armature|123",
+        "duration": 0.0416666679084301,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|123",
+            "from": 0,
+            "to": 0.0416666679084301,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|ArmatureAction",
+        "duration": 0.0416666679084301,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|ArmatureAction",
+            "from": 0,
+            "to": 0.0416666679084301,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|IndexSqueeze",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|IndexSqueeze",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|MIddleSqueeze",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|MIddleSqueeze",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|PinkySqueeze",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|PinkySqueeze",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|RingSqueeze",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|RingSqueeze",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|RingSqueeze.001",
+        "duration": 0.0416666679084301,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|RingSqueeze.001",
+            "from": 0,
+            "to": 0.0416666679084301,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|ThumbRot",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|ThumbRot",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|ThumbSqueeze",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|ThumbSqueeze",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      },
+      {
+        "name": "Armature|Wrist",
+        "duration": 2.5,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Armature|Wrist",
+            "from": 0,
+            "to": 2.5,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "a769b994-ac15-4034-a29f-7a2859ba4390@c2023",
+    "assetFinder": {
+      "meshes": [
+        "a769b994-ac15-4034-a29f-7a2859ba4390@c9c57"
+      ],
+      "skeletons": [
+        "a769b994-ac15-4034-a29f-7a2859ba4390@438fe"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "a769b994-ac15-4034-a29f-7a2859ba4390@c2023"
+      ]
+    },
+    "dumpMaterials": true,
+    "depthWriteInAlphaModeBlend": false,
+    "useVertexColors": true,
+    "materialDumpDir": "db://assets/HandTextures"
+  }
+}
