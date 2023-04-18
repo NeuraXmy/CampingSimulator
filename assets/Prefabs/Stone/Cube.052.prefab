@@ -1,0 +1,126 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "Cube.052",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "persistent": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Cube.052",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__id__": 5
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0.007889198214943688,
+      "y": 0.0007913690622134428,
+      "z": -0.003484555795790127
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": -0.0091691022138979,
+      "y": -0.04757692174013055,
+      "z": -0.2954911244199431,
+      "w": 0.9523973790425753
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 0.6225891125069711,
+      "y": 0.5403759657948713,
+      "z": 0.29221784309620386
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": -3.161682502515683,
+      "y": -6.673571683516297,
+      "z": -34.19266354988837
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.MeshRenderer",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 3
+    },
+    "_materials": [
+      {
+        "__uuid__": "b6600976-3143-41e6-9891-e0e9b2683a30",
+        "__expectedType__": "cc.Material"
+      }
+    ],
+    "_visFlags": 0,
+    "bakeSettings": {
+      "__id__": 4
+    },
+    "_mesh": {
+      "__uuid__": "e47105e5-3572-441f-9fe1-4a12839a0452@7b9da",
+      "__expectedType__": "cc.Mesh"
+    },
+    "_shadowCastingMode": 0,
+    "_shadowReceivingMode": 1,
+    "_shadowBias": 0,
+    "_shadowNormalBias": 0,
+    "_enableMorph": true,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "2e7b4X2BxNVbSH2m5U0yBA"
+  },
+  {
+    "__type__": "cc.ModelBakeSettings",
+    "texture": null,
+    "uvParam": {
+      "__type__": "cc.Vec4",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "_bakeable": false,
+    "_castShadow": false,
+    "_receiveShadow": false,
+    "_recieveShadow": false,
+    "_lightmapSize": 64,
+    "_useLightProbe": false,
+    "_bakeToLightProbe": true,
+    "_reflectionProbeType": 0,
+    "_bakeToReflectionProbe": true,
+    "_probeCubemap": null
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "7apsQeMCNK24qY7SO1cdyw",
+    "targetOverrides": null
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "14cdf58a-e392-4aa8-9460-f129279389b7",
+  "files": [],
+  "subMetas": {
+    "e22fe": {
+      "importer": "gltf-mesh",
+      "uuid": "14cdf58a-e392-4aa8-9460-f129279389b7@e22fe",
+      "displayName": "",
+      "id": "e22fe",
+      "name": "pPlane1.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "14cdf58a-e392-4aa8-9460-f129279389b7@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ffcbb": {
+      "importer": "gltf-scene",
+      "uuid": "14cdf58a-e392-4aa8-9460-f129279389b7@ffcbb",
+      "displayName": "",
+      "id": "ffcbb",
+      "name": "Tent.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "14cdf58a-e392-4aa8-9460-f129279389b7@ffcbb",
+    "assetFinder": {
+      "meshes": [
+        "14cdf58a-e392-4aa8-9460-f129279389b7@e22fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "14cdf58a-e392-4aa8-9460-f129279389b7@8d883"
+      ],
+      "scenes": [
+        "14cdf58a-e392-4aa8-9460-f129279389b7@ffcbb"
+      ]
+    }
+  }
+}

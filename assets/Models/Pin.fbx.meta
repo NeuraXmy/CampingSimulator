@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3129e18a-65b2-4f80-a8f0-1dd309ce1262",
+  "files": [],
+  "subMetas": {
+    "b8162": {
+      "importer": "gltf-mesh",
+      "uuid": "3129e18a-65b2-4f80-a8f0-1dd309ce1262@b8162",
+      "displayName": "",
+      "id": "b8162",
+      "name": "pCube1.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "3129e18a-65b2-4f80-a8f0-1dd309ce1262@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "137be": {
+      "importer": "gltf-scene",
+      "uuid": "3129e18a-65b2-4f80-a8f0-1dd309ce1262@137be",
+      "displayName": "",
+      "id": "137be",
+      "name": "Pin.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "3129e18a-65b2-4f80-a8f0-1dd309ce1262@137be",
+    "assetFinder": {
+      "meshes": [
+        "3129e18a-65b2-4f80-a8f0-1dd309ce1262@b8162"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "3129e18a-65b2-4f80-a8f0-1dd309ce1262@8d883"
+      ],
+      "scenes": [
+        "3129e18a-65b2-4f80-a8f0-1dd309ce1262@137be"
+      ]
+    }
+  }
+}
