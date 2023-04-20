@@ -44,15 +44,14 @@
   ],
   "_props": [
     {
-      "mainColor": {
+      "metallic": 0.5,
+      "emissive": {
         "__type__": "cc.Color",
-        "r": 98,
-        "g": 136,
-        "b": 81,
+        "r": 255,
+        "g": 157,
+        "b": 92,
         "a": 255
-      },
-      "roughness": 0.8,
-      "specularIntensity": 1
+      }
     },
     {},
     {}

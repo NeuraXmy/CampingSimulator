@@ -9,7 +9,9 @@
   },
   "_techIdx": 0,
   "_defines": [
-    {},
+    {
+      "USE_REFLECTION_DENOISE": true
+    },
     {},
     {}
   ],
@@ -44,14 +46,8 @@
   ],
   "_props": [
     {
-      "mainColor": {
-        "__type__": "cc.Color",
-        "r": 98,
-        "g": 136,
-        "b": 81,
-        "a": 255
-      },
-      "roughness": 0.8,
+      "roughness": 0.4,
+      "metallic": 0.2,
       "specularIntensity": 1
     },
     {},

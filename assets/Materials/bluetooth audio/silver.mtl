@@ -44,15 +44,23 @@
   ],
   "_props": [
     {
-      "mainColor": {
+      "occlusion": 1,
+      "roughness": 0.3,
+      "metallic": 1,
+      "specularIntensity": 1,
+      "emissive": {
         "__type__": "cc.Color",
-        "r": 98,
-        "g": 136,
-        "b": 81,
+        "r": 192,
+        "g": 192,
+        "b": 192,
         "a": 255
       },
-      "roughness": 0.8,
-      "specularIntensity": 1
+      "emissiveScale": {
+        "__type__": "cc.Vec3",
+        "x": 1.6,
+        "y": 1,
+        "z": 1
+      }
     },
     {},
     {}

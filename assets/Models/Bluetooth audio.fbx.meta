@@ -1,0 +1,258 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0a444363-5111-422c-9ba1-834b90ca7529",
+  "files": [],
+  "subMetas": {
+    "10677": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@10677",
+      "displayName": "",
+      "id": "10677",
+      "name": "polySurface13.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "de30a": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@de30a",
+      "displayName": "",
+      "id": "de30a",
+      "name": "polySurface12.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3a7b3": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@3a7b3",
+      "displayName": "",
+      "id": "3a7b3",
+      "name": "polySurface11.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ae581": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@ae581",
+      "displayName": "",
+      "id": "ae581",
+      "name": "polySurface9.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "967a8": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@967a8",
+      "displayName": "",
+      "id": "967a8",
+      "name": "polySurface14.mesh",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bd747": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@bd747",
+      "displayName": "",
+      "id": "bd747",
+      "name": "polySurface15.mesh",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "32e93": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@32e93",
+      "displayName": "",
+      "id": "32e93",
+      "name": "polySurface19.mesh",
+      "userData": {
+        "gltfIndex": 6
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0d2eb": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@0d2eb",
+      "displayName": "",
+      "id": "0d2eb",
+      "name": "polySurface20.mesh",
+      "userData": {
+        "gltfIndex": 7
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "950fb": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@950fb",
+      "displayName": "",
+      "id": "950fb",
+      "name": "polySurface21.mesh",
+      "userData": {
+        "gltfIndex": 8
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b5faa": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@b5faa",
+      "displayName": "",
+      "id": "b5faa",
+      "name": "polySurface17.mesh",
+      "userData": {
+        "gltfIndex": 9
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "306cf": {
+      "importer": "gltf-mesh",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@306cf",
+      "displayName": "",
+      "id": "306cf",
+      "name": "polySurface18.mesh",
+      "userData": {
+        "gltfIndex": 10
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c9837": {
+      "importer": "gltf-scene",
+      "uuid": "0a444363-5111-422c-9ba1-834b90ca7529@c9837",
+      "displayName": "",
+      "id": "c9837",
+      "name": "Bluetooth audio.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "0a444363-5111-422c-9ba1-834b90ca7529@c9837",
+    "assetFinder": {
+      "meshes": [
+        "0a444363-5111-422c-9ba1-834b90ca7529@de30a",
+        "0a444363-5111-422c-9ba1-834b90ca7529@10677",
+        "0a444363-5111-422c-9ba1-834b90ca7529@3a7b3",
+        "0a444363-5111-422c-9ba1-834b90ca7529@ae581",
+        "0a444363-5111-422c-9ba1-834b90ca7529@967a8",
+        "0a444363-5111-422c-9ba1-834b90ca7529@bd747",
+        "0a444363-5111-422c-9ba1-834b90ca7529@32e93",
+        "0a444363-5111-422c-9ba1-834b90ca7529@0d2eb",
+        "0a444363-5111-422c-9ba1-834b90ca7529@950fb",
+        "0a444363-5111-422c-9ba1-834b90ca7529@b5faa",
+        "0a444363-5111-422c-9ba1-834b90ca7529@306cf"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "0a444363-5111-422c-9ba1-834b90ca7529@8d883"
+      ],
+      "scenes": [
+        "0a444363-5111-422c-9ba1-834b90ca7529@c9837"
+      ]
+    }
+  }
+}

@@ -44,14 +44,8 @@
   ],
   "_props": [
     {
-      "mainColor": {
-        "__type__": "cc.Color",
-        "r": 98,
-        "g": 136,
-        "b": 81,
-        "a": 255
-      },
-      "roughness": 0.8,
+      "roughness": 0.2,
+      "metallic": 0.2,
       "specularIntensity": 1
     },
     {},

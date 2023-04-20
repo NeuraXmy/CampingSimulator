@@ -1,0 +1,96 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9",
+  "files": [],
+  "subMetas": {
+    "01a55": {
+      "importer": "gltf-mesh",
+      "uuid": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@01a55",
+      "displayName": "",
+      "id": "01a55",
+      "name": "polySurface1.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "db573": {
+      "importer": "gltf-mesh",
+      "uuid": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@db573",
+      "displayName": "",
+      "id": "db573",
+      "name": "polySurface2.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "20a07": {
+      "importer": "gltf-scene",
+      "uuid": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@20a07",
+      "displayName": "",
+      "id": "20a07",
+      "name": "Atmosphere lamp.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@20a07",
+    "assetFinder": {
+      "meshes": [
+        "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@01a55",
+        "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@db573"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@8d883"
+      ],
+      "scenes": [
+        "44502dbc-a4e7-47f6-91d3-ed83ad6ef1e9@20a07"
+      ]
+    }
+  }
+}
