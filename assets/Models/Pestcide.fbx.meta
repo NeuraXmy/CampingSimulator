@@ -1,0 +1,132 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8",
+  "files": [],
+  "subMetas": {
+    "b8162": {
+      "importer": "gltf-mesh",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@b8162",
+      "displayName": "",
+      "id": "b8162",
+      "name": "pCube1.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "35ebe": {
+      "importer": "gltf-mesh",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@35ebe",
+      "displayName": "",
+      "id": "35ebe",
+      "name": "pCylinder1.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2c4f": {
+      "importer": "gltf-mesh",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@c2c4f",
+      "displayName": "",
+      "id": "c2c4f",
+      "name": "pCylinder2.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73d00": {
+      "importer": "gltf-mesh",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@73d00",
+      "displayName": "",
+      "id": "73d00",
+      "name": "pCylinder3.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "716e7": {
+      "importer": "gltf-scene",
+      "uuid": "19d2259f-1fcf-4c56-9952-41be8e0646e8@716e7",
+      "displayName": "",
+      "id": "716e7",
+      "name": "Pestcide.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "19d2259f-1fcf-4c56-9952-41be8e0646e8@716e7",
+    "assetFinder": {
+      "meshes": [
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@b8162",
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@35ebe",
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@c2c4f",
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@73d00"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@8d883"
+      ],
+      "scenes": [
+        "19d2259f-1fcf-4c56-9952-41be8e0646e8@716e7"
+      ]
+    }
+  }
+}
