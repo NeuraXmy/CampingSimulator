@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, Sprite, CCFloat, CCInteger, SpriteFrame, RenderTexture, Texture2D, game, renderer, Rect, v2, Vec2, instantiate, debug, v3, CCBoolean, rect, math } from 'cc';
+import { _decorator, Component, Node, Prefab, Sprite, CCFloat, CCInteger, SpriteFrame, RenderTexture, Texture2D, game, renderer, Rect, v2, Vec2, instantiate, debug, v3, CCBoolean, rect, math, Terrain } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('NatureItemGenerator')
@@ -24,21 +24,57 @@ export class NatureItemGenerator extends Component {
 
     @property(Vec2)
     random_scale: Vec2 = v2(1.0, 1.0)
+
+    @property(Terrain)
+    mask: Terrain = null
+
+    @property(Boolean)
+    normalize_mask: boolean = true
+
+    @property(Boolean)
+    density_mask: boolean = true
+
+    @property(Boolean)
+    scale_mask: boolean = true
+
+
+    mask_max_height: number = -1e9
+    mask_min_height: number = 1e9
     
     start() {
         this.generate();
     }
 
-    generate() {
+    get_mask_height(grid_x: number, grid_z: number) {
+        var x = (this.region.x + grid_x * this.grid_size.x + this.grid_size.x / 2)
+        var z = (this.region.y + grid_z * this.grid_size.y + this.grid_size.y / 2) / this.mask.node.scale.z
+    }
 
-        var x_grid_n = Math.ceil(this.region.width  / this.grid_size.x)
-        var z_grid_n = Math.ceil(this.region.height / this.grid_size.y)
+    generate() {
+        var x_grid_n = Math.floor(this.region.width  / this.grid_size.x)
+        var z_grid_n = Math.floor(this.region.height / this.grid_size.y)
         var positions = []
+
+        if (this.mask != null) {
+            for (var i = 0; i < x_grid_n; i++) 
+                for (var j = 0; j < z_grid_n; j++) {
+                    
+                    
+
+                    var height = this.mask.getHeight(x , z)
+                }    
+        }
+        
 
         for (var i = 0; i < x_grid_n; i++) {
             for (var j = 0; j < z_grid_n; j++) {
                 var x = this.region.x + i * this.grid_size.x
                 var z = this.region.y + j * this.grid_size.y
+                
+                if (this.mask != null && this.density_mask) {
+
+                }
+
                 for(var k = 0; k < this.num_in_grid; k++) {
                     var x_offset = math.randomRange(0, this.grid_size.x)
                     var z_offset = math.randomRange(0, this.grid_size.y)
