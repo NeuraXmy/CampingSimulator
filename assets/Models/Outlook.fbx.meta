@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6",
+  "files": [],
+  "subMetas": {
+    "e208e": {
+      "importer": "gltf-mesh",
+      "uuid": "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@e208e",
+      "displayName": "",
+      "id": "e208e",
+      "name": "pCube32.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8d883": {
+      "importer": "gltf-material",
+      "uuid": "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@8d883",
+      "displayName": "",
+      "id": "8d883",
+      "name": "lambert1.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "dd649": {
+      "importer": "gltf-scene",
+      "uuid": "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@dd649",
+      "displayName": "",
+      "id": "dd649",
+      "name": "Outlook.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@dd649",
+    "assetFinder": {
+      "meshes": [
+        "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@e208e"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@8d883"
+      ],
+      "scenes": [
+        "e9f5d38f-565f-4843-8e6d-a7f3aa8939b6@dd649"
+      ]
+    }
+  }
+}
