@@ -81,7 +81,8 @@
         "b": 78,
         "a": 255
       },
-      "randomDarken": 0.5,
+      "ambientOcclusion": 0.604,
+      "randomDarken": 0,
       "translucency": 0.57
     },
     {}
