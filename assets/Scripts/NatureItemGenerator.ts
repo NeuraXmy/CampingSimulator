@@ -1,4 +1,5 @@
-import { _decorator, Component, Node, Prefab, Sprite, CCFloat, CCInteger, SpriteFrame, RenderTexture, Texture2D, game, renderer, Rect, v2, Vec2, instantiate, debug, v3, CCBoolean, rect, math, Terrain } from 'cc';
+import { _decorator, Component, Node, Prefab, Sprite, CCFloat, CCInteger, SpriteFrame, RenderTexture, Texture2D, game, renderer, Rect, v2, Vec2, instantiate, debug, v3, CCBoolean, rect, math, Terrain, clamp, Quat, Vec3, isValid } from 'cc';
+import { RotationAxisConstrain } from '../../extensions/xr-plugin/assets/ar/component/interaction/constrain/rotation-axis-constraint';
 const { ccclass, property } = _decorator;
 
 @ccclass('NatureItemGenerator')
@@ -14,7 +15,7 @@ export class NatureItemGenerator extends Component {
     grid_size: Vec2 = v2(1.0, 1.0)
 
     @property(CCInteger)
-    num_in_grid: number = 1
+    basic_density: number = 1
 
     @property(Rect)
     region: Rect = new Rect(0, 0, 100, 100)
@@ -26,75 +27,161 @@ export class NatureItemGenerator extends Component {
     random_scale: Vec2 = v2(1.0, 1.0)
 
     @property(Terrain)
-    mask: Terrain = null
+    density_mask: Terrain = null
+
+    @property(CCFloat)
+    density_mask_offset: number = 0.0
+
+    @property(CCFloat)
+    density_mask_factor: number = 1.0
+
+    @property(Terrain)
+    scale_mask: Terrain = null
+
+    @property(CCFloat)
+    scale_mask_offset: number = 0.0
+
+    @property(CCFloat)
+    scale_mask_factor: number = 1.0
+
+    @property(Terrain)
+    terrain: Terrain = null
 
     @property(Boolean)
-    normalize_mask: boolean = true
+    fit_height: boolean = true
+
+    @property(CCFloat)
+    height_offset: number = 0.0
 
     @property(Boolean)
-    density_mask: boolean = true
+    fit_slope: boolean = false
 
-    @property(Boolean)
-    scale_mask: boolean = true
-
-
-    mask_max_height: number = -1e9
-    mask_min_height: number = 1e9
     
     start() {
         this.generate();
     }
 
-    get_mask_height(grid_x: number, grid_z: number) {
-        var x = (this.region.x + grid_x * this.grid_size.x + this.grid_size.x / 2)
-        var z = (this.region.y + grid_z * this.grid_size.y + this.grid_size.y / 2) / this.mask.node.scale.z
+    get_grid_center(grid_x: number, grid_z: number) {
+        let x = this.region.x + grid_x * this.grid_size.x + this.grid_size.x / 2 
+        let z = this.region.y + grid_z * this.grid_size.y + this.grid_size.y / 2
+        return v2(x, z)
+    }
+
+    get_height(t: Terrain, x: number, z: number) {
+        x = (x - this.region.x) / this.region.width  * 32
+        z = (z - this.region.y) / this.region.height * 32
+        let xi = Math.floor(x)
+        let zi = Math.floor(z)
+        let xoffset = x - xi
+        let zoffset = z - zi
+        
+        let h00 = t.getHeight(xi, zi)
+        let h01 = t.getHeight(xi, zi + 1)
+        let h10 = t.getHeight(xi + 1, zi)
+        let h11 = t.getHeight(xi + 1, zi + 1)
+
+        let h = h00 * (1 - xoffset) * (1 - zoffset) 
+              + h01 * (1 - xoffset) * zoffset 
+              + h10 * xoffset * (1 - zoffset) 
+              + h11 * xoffset * zoffset
+
+        return h
+    }
+
+    get_normal(t: Terrain, x: number, z: number) {
+        x = (x - this.region.x) / this.region.width  * 32
+        z = (z - this.region.y) / this.region.height * 32
+        let xi = Math.floor(x)
+        let zi = Math.floor(z)
+        let xoffset = x - xi
+        let zoffset = z - zi
+        
+        let n00 = t.getNormal(xi, zi)
+        let n01 = t.getNormal(xi, zi + 1)
+        let n10 = t.getNormal(xi + 1, zi)
+        let n11 = t.getNormal(xi + 1, zi + 1)
+
+        n00.multiplyScalar((1 - xoffset) * (1 - zoffset))
+        n01.multiplyScalar((1 - xoffset) * zoffset)
+        n10.multiplyScalar(xoffset * (1 - zoffset))
+        n11.multiplyScalar(xoffset * zoffset)
+
+        let n = n00.add(n01).add(n10).add(n11).normalize()
+        return n
     }
 
     generate() {
-        var x_grid_n = Math.floor(this.region.width  / this.grid_size.x)
-        var z_grid_n = Math.floor(this.region.height / this.grid_size.y)
-        var positions = []
+        console.log(`${typeof this.density_mask}`)
 
-        if (this.mask != null) {
-            for (var i = 0; i < x_grid_n; i++) 
-                for (var j = 0; j < z_grid_n; j++) {
-                    
-                    
+        let x_grid_n = Math.floor(this.region.width  / this.grid_size.x)
+        let z_grid_n = Math.floor(this.region.height / this.grid_size.y)
 
-                    var height = this.mask.getHeight(x , z)
-                }    
-        }
-        
+        // generate positions
+        let positions = []
+        for (let i = 0; i < x_grid_n; i++) {
+            for (let j = 0; j < z_grid_n; j++) {
+                let pos = this.get_grid_center(i, j)
 
-        for (var i = 0; i < x_grid_n; i++) {
-            for (var j = 0; j < z_grid_n; j++) {
-                var x = this.region.x + i * this.grid_size.x
-                var z = this.region.y + j * this.grid_size.y
-                
-                if (this.mask != null && this.density_mask) {
-
+                // apply mask to num per grid
+                let num = this.basic_density
+                if (this.density_mask) {
+                    let alpha = this.get_height(this.density_mask, pos.x, pos.y)
+                    alpha = Math.max(alpha * this.density_mask_factor + this.density_mask_offset, 0)
+                    num *= alpha
                 }
+                let int_num = Math.floor(num)
+                if (math.randomRange(0, 1) < num - int_num)
+                    int_num += 1
+                num = int_num
 
-                for(var k = 0; k < this.num_in_grid; k++) {
-                    var x_offset = math.randomRange(0, this.grid_size.x)
-                    var z_offset = math.randomRange(0, this.grid_size.y)
-                    positions.push(v3(x + x_offset, 0, z + z_offset))
+                for(let k = 0; k < num; k++) {
+                    let x_offset = math.randomRange(-this.grid_size.x / 2, this.grid_size.x / 2)
+                    let z_offset = math.randomRange(-this.grid_size.y / 2, this.grid_size.y / 2)
+                    positions.push(v2(pos.x + x_offset, pos.y + z_offset))
                 }
             }
         }
         
-        for (var pos of positions) {
+        // generate items
+        for (let pos of positions) {
             const node = instantiate(this.prefab)
-            node.position = pos
+
+            // rotate to fix slope
+            let up_vec = v3(0, 1, 0)
+            if(this.terrain && this.fit_slope) 
+                up_vec = this.get_normal(this.terrain, pos.x, pos.y)
+            let rot = new Quat();
+            let view_vec = up_vec.clone().cross(v3(0, 0, 1))
+            Quat.fromViewUp(rot, view_vec, up_vec)
+            node.setRotation(rot)
+
+            // random rotate
+            let angle = 0
             if (this.random_rotation) 
-                node.eulerAngles = v3(0, math.randomRange(0, 360), 0)
-            if (this.random_scale.x != 1.0 || this.random_scale.y != 1.0) {
-                var scale = math.randomRange(this.random_scale.x, this.random_scale.y)
-                node.scale = v3(scale, scale, scale)
+                angle = math.randomRange(0, math.TWO_PI)
+            rot = new Quat();
+            Quat.fromAxisAngle(rot, v3(0, 1, 0), angle)
+            node.rotate(rot)
+
+            // fit height
+            let h = 0
+            if (this.terrain && this.fit_height) 
+                h = this.get_height(this.terrain, pos.x, pos.y)
+            // set position and height
+            node.position = v3(pos.x, h, pos.y).add(up_vec.multiplyScalar(this.height_offset))
+
+            // random scale and apply mask to scale
+            let scale = math.randomRange(this.random_scale.x, this.random_scale.y)
+            if (this.scale_mask) {
+                let alpha = this.get_height(this.scale_mask, pos.x, pos.y)
+                alpha = Math.max(alpha * this.scale_mask_factor + this.scale_mask_offset, 0)
+                scale *= alpha
             }
+            node.scale = v3(scale, scale, scale)
+
             this.container_node.addChild(node)
         }
-        console.log(`Generated ${positions.length} of ${this.prefab}`)
-        
+
+        console.log(`Generated ${positions.length} of ${this.prefab.name} to ${this.container_node.name}`)
     }
 }
