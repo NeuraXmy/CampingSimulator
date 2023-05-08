@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.3",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8956c026-8c28-4795-aab8-b0eae2496b08",
+  "files": [],
+  "subMetas": {
+    "17bc4": {
+      "importer": "gltf-mesh",
+      "uuid": "8956c026-8c28-4795-aab8-b0eae2496b08@17bc4",
+      "displayName": "",
+      "id": "17bc4",
+      "name": "Fastening1Shape.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7a3ca": {
+      "importer": "gltf-material",
+      "uuid": "8956c026-8c28-4795-aab8-b0eae2496b08@7a3ca",
+      "displayName": "",
+      "id": "7a3ca",
+      "name": "lambert2.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5c84": {
+      "importer": "gltf-scene",
+      "uuid": "8956c026-8c28-4795-aab8-b0eae2496b08@f5c84",
+      "displayName": "",
+      "id": "f5c84",
+      "name": "Fastening (stretched).prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "8956c026-8c28-4795-aab8-b0eae2496b08@f5c84",
+    "assetFinder": {
+      "meshes": [
+        "8956c026-8c28-4795-aab8-b0eae2496b08@17bc4"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "8956c026-8c28-4795-aab8-b0eae2496b08@7a3ca"
+      ],
+      "scenes": [
+        "8956c026-8c28-4795-aab8-b0eae2496b08@f5c84"
+      ]
+    }
+  }
+}
