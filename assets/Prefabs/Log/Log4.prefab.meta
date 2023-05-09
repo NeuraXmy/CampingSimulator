@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "5ffba0ba-049d-492c-b914-7c5cc01ec9d4",
+  "uuid": "6dcf4125-7c79-4164-bf4a-5c0334a5dfcf",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "Cube-001"
+    "syncNodeName": "Log4"
   }
 }

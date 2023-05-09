@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Cube-001",
+    "_name": "Log2",
     "_objFlags": 0,
     "_native": "",
     "data": {
@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Cube-001",
+    "_name": "Log2",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -28,30 +28,30 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 13.026,
-      "y": 1.897,
-      "z": 10.589
+      "x": 0,
+      "y": 0,
+      "z": -3.8286828994750977
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.7071068407911907,
+      "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 0.7071067215818992
+      "z": 0.7071067811865476,
+      "w": 0.7071067811865476
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 103.60000000000001,
-      "y": 83.95524362182617,
-      "z": 103.60000000000001
+      "x": 0.4963397681713104,
+      "y": 1.8170243501663208,
+      "z": 0.6482371687889099
     },
     "_mobility": 0,
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -90.0000096593463,
+      "x": 0,
       "y": 0,
-      "z": 0
+      "z": 90
     },
     "_id": ""
   },
@@ -68,7 +68,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "b6600976-3143-41e6-9891-e0e9b2683a30",
+        "__uuid__": "4e59f603-cc1c-4a1e-84e0-7978b4c2de32@3f891",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -77,7 +77,7 @@
       "__id__": 4
     },
     "_mesh": {
-      "__uuid__": "e47105e5-3572-441f-9fe1-4a12839a0452@2f6d1",
+      "__uuid__": "4e59f603-cc1c-4a1e-84e0-7978b4c2de32@0b568",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
@@ -89,7 +89,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "22J1Per+9FWpmC0liN7PmA"
+    "fileId": "8bAd6MDLhdc5i4UptnAWw0"
   },
   {
     "__type__": "cc.ModelBakeSettings",
@@ -120,7 +120,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "04CgCxCqZJ+Zw2W2kIXjuq",
+    "fileId": "9dLjiyPUNbAZxnKyREQjqx",
     "targetOverrides": null
   }
 ]
