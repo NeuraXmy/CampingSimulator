@@ -5,55 +5,55 @@ const { ccclass, property } = _decorator;
 @ccclass('NatureItemGenerator')
 export class NatureItemGenerator extends Component {
 
-    @property(Prefab)
+    @property({type: Prefab})
     prefab: Prefab = null;
 
-    @property(Node)
+    @property({type: Node})
     container_node: Node = null;
 
-    @property(Vec2)
+    @property({type: Vec2})
     grid_size: Vec2 = v2(1.0, 1.0)
 
-    @property(CCInteger)
+    @property({type: CCInteger})
     basic_density: number = 1
 
-    @property(Rect)
+    @property({type: Rect})
     region: Rect = new Rect(0, 0, 100, 100)
 
-    @property(Boolean)
+    @property({type: Boolean})
     random_rotation: boolean = true
 
-    @property(Vec2)
+    @property({type: Vec2})
     random_scale: Vec2 = v2(1.0, 1.0)
 
-    @property(Terrain)
+    @property({type: Terrain})
     density_mask: Terrain = null
 
-    @property(CCFloat)
+    @property({type: CCFloat})
     density_mask_offset: number = 0.0
 
-    @property(CCFloat)
+    @property({type: CCFloat})
     density_mask_factor: number = 1.0
 
-    @property(Terrain)
+    @property({type: Terrain})
     scale_mask: Terrain = null
 
-    @property(CCFloat)
+    @property({type: CCFloat})
     scale_mask_offset: number = 0.0
 
-    @property(CCFloat)
+    @property({type: CCFloat})
     scale_mask_factor: number = 1.0
 
-    @property(Terrain)
+    @property({type: Terrain})
     terrain: Terrain = null
 
-    @property(Boolean)
+    @property({type: Boolean})
     fit_height: boolean = true
 
-    @property(CCFloat)
+    @property({type: CCFloat})
     height_offset: number = 0.0
 
-    @property(Boolean)
+    @property({type: Boolean})
     fit_slope: boolean = false
 
     
