@@ -30,12 +30,14 @@
         "__id__": 12
       },
       {
+        "__id__": 18
+      },
+      {
         "__id__": 14
       }
     ],
     "_active": true,
     "_components": [],
-    "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -65,7 +67,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 18
+      "__id__": 20
     },
     "_id": "48c5293e-d376-4bd1-a592-19eef7fcda87"
   },
@@ -183,16 +185,16 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 20,
-      "y": 50,
-      "z": 100
+      "x": 2.964,
+      "y": 35.49,
+      "z": 280.954
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.043619387365336,
+      "x": 0.07764129339934116,
       "y": 0,
       "z": 0,
-      "w": 0.9990482215818578
+      "w": 0.9969813586819352
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -204,7 +206,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -5,
+      "x": 8.906,
       "y": 0,
       "z": 0
     },
@@ -491,16 +493,16 @@
     },
     "_effectAsset": null,
     "_lightmapInfos": [],
-    "_receiveShadow": false,
-    "_useNormalmap": false,
-    "_usePBR": false,
-    "_lodEnable": false,
+    "_receiveShadow": true,
+    "_useNormalmap": true,
+    "_usePBR": true,
+    "_lodEnable": true,
     "_lodBias": 0,
-    "_id": "f3wT8/Oh1CU5X80yhHVhwo"
+    "_id": "d9+lSiiCZEqbokBXNJZozX"
   },
   {
     "__type__": "cc.Node",
-    "_name": "Terrain",
+    "_name": "Terrain1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -528,9 +530,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
+      "x": 5.666,
+      "y": 4.406,
+      "z": 4.406
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -540,7 +542,7 @@
       "y": 0,
       "z": 0
     },
-    "_id": "ffhDIgNJhLbqcD6LXuQzOF"
+    "_id": "fd3BN/eClI4JsCBtd0/hf8"
   },
   {
     "__type__": "cc.Node",
@@ -680,24 +682,90 @@
     "_id": "2dYLi9Xs5CKIENYU6jjnAW"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "Terrain",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": false,
+    "_components": [
+      {
+        "__id__": 19
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": -160,
+      "y": 0,
+      "z": -160
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1.286,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "ffhDIgNJhLbqcD6LXuQzOF"
+  },
+  {
+    "__type__": "cc.Terrain",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 18
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "__asset": {
+      "__uuid__": "4850eaa7-7769-464b-9d2c-fecc5c35d289",
+      "__expectedType__": "cc.TerrainAsset"
+    },
+    "_effectAsset": null,
+    "_lightmapInfos": [],
+    "_receiveShadow": false,
+    "_useNormalmap": false,
+    "_usePBR": false,
+    "_lodEnable": true,
+    "_lodBias": 0,
+    "_id": "f3wT8/Oh1CU5X80yhHVhwo"
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 19
-    },
-    "shadows": {
-      "__id__": 20
-    },
-    "_skybox": {
       "__id__": 21
     },
-    "fog": {
+    "shadows": {
       "__id__": 22
     },
-    "octree": {
+    "_skybox": {
       "__id__": 23
     },
-    "lightProbeInfo": {
+    "fog": {
       "__id__": 24
+    },
+    "octree": {
+      "__id__": 25
+    },
+    "lightProbeInfo": {
+      "__id__": 26
     },
     "bakedWithStationaryMainLight": false
   },
