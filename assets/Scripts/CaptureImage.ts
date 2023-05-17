@@ -1,4 +1,4 @@
-import * as cc from 'cc';
+/*import * as cc from 'cc';
 const { ccclass, property } = cc._decorator;
 
 @ccclass('Capture_Scress')
@@ -19,4 +19,4 @@ export class Capture_Scress extends cc.Component{
     texture.saveToFile(fileName, cc.IMAGE_FORMAT_JPG);
 }
 
-
+*/
