@@ -1,22 +1,51 @@
-/*import * as cc from 'cc';
-const { ccclass, property } = cc._decorator;
+import { _decorator, Prefab, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate } from 'cc';
+const { ccclass, property } = _decorator;
 
-@ccclass('Capture_Scress')
-export class Capture_Scress extends cc.Component{
-    var size = cc.director.getWinSize();cc.director.get
-    var fileName = "result_share.jpg";
-    var fullPath = jsb.fileUtils.getWritablePath() + fileName;
-    if(jsb.fileUtils.isFileExist(fullPath)){
-        jsb.fileUtils.removeFile(fullPath);
+@ccclass('CaptureImage')
+export class CaptureImage extends Component {
+    @property(Camera)
+    copyCamera: Camera = null;
+
+    @property({type: Prefab})
+    cubePrfb: Prefab | null = null;
+
+    @property(Node)
+    targetNode: Node = null!;
+    @property(Texture2D)
+    temptexture1: Texture2D = null;
+    @property(Texture2D)
+    temptexture2: Texture2D = null;
+    rt: RenderTexture
+
+    private _image: HTMLImageElement
+    _canvas: HTMLCanvasElement = null!;
+    _buffer: ArrayBufferView = null!;
+
+    start() {
+        this.rt = new RenderTexture();
+        this.rt.reset({
+            width: view.getVisibleSize().width,
+            height: view.getVisibleSize().height,
+        })
+        // this.copyCamera.targetTexture = this.rt;
     }
-    //如果要图片高质量 可以使用cc.Texture2D.PIXEL_FORMAT_RGBA8888。
-    var texture = new cc.RenderTexture(Math.floor(size.width), Math.floor(size.height));
-    texture.setPosition(cc.p(size.width/2, size.height/2));
-    texture.begin();
-    cc.director.getRunningScene().visit();
-    texture.end();
-    //1.4 以后，截屏函数的第二个参数改成了 cc.ImageFormat.PNG
-    texture.saveToFile(fileName, cc.IMAGE_FORMAT_JPG);
-}
 
-*/
+    private copyRenderTex() {
+        const width = this.targetNode.getComponent(UITransform).width;
+        const height = this.targetNode.getComponent(UITransform).height;
+        const anchorPoint = this.targetNode.getComponent(UITransform).anchorPoint;
+        const worldPos = this.targetNode.getWorldPosition();
+        this._buffer = this.rt.readPixels(Math.round(worldPos.x - width * anchorPoint.x), Math.round(worldPos.y - height * anchorPoint.y), width, height);
+        let block:Node = instantiate(this.cubePrfb);
+        
+        block.setPosition(-0.5,-0.4,-10);
+        console.info('Copy');
+    }
+
+    private clearCapture() {
+        if (this._image) {
+            game.container!.removeChild(this._image)
+        }
+        this._image = null;
+    }
+}
