@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Pin",
+    "_name": "Tent",
     "_objFlags": 0,
     "_native": "",
     "data": {
@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Pin",
+    "_name": "Tent",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -41,9 +41,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 66.157,
-      "y": 66.157,
-      "z": 66.157
+      "x": 1,
+      "y": 0.01,
+      "z": 1
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -57,7 +57,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "pCube1",
+    "_name": "pPlane1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -87,9 +87,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.11111889034509659,
-      "y": 1.338057041168213,
-      "z": 0.01651303470134735
+      "x": 6.43228816986084,
+      "y": 6.43228816986084,
+      "z": 6.43228816986084
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -114,7 +114,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "17b71c15-d77d-4a9d-97db-e5f891f3dd9e",
+        "__uuid__": "14cdf58a-e392-4aa8-9460-f129279389b7@8d883",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -123,7 +123,7 @@
       "__id__": 5
     },
     "_mesh": {
-      "__uuid__": "3129e18a-65b2-4f80-a8f0-1dd309ce1262@b8162",
+      "__uuid__": "14cdf58a-e392-4aa8-9460-f129279389b7@e22fe",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
@@ -135,7 +135,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "2cDXkcF9RZiJblGT5QaAVf"
+    "fileId": "75gsVdymxSUYSadgWZkv8A"
   },
   {
     "__type__": "cc.ModelBakeSettings",
@@ -166,7 +166,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "a2ShqLQ/pQVaZpvzOB+SE7",
+    "fileId": "8bB5kQCU1Rx5OgektNV3Nu",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -179,8 +179,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "0462goSltaDYp42aEklYQK",
-    "instance": null,
+    "fileId": "fae01J6hpUVI58/XPlQGhX",
     "targetOverrides": null
   }
 ]

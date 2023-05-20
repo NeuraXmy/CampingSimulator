@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Rod2",
+    "_name": "RodTail",
     "_objFlags": 0,
     "_native": "",
     "data": {
@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Rod2",
+    "_name": "RodTail",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -28,9 +28,9 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 9.791679138966837,
+      "x": 0,
       "y": 0,
-      "z": -19.672
+      "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -41,9 +41,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 5.244,
-      "y": 157.238,
-      "z": 5.244
+      "x": 0.14616510272026062,
+      "y": 4.382753849029541,
+      "z": 0.14616510272026062
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -68,7 +68,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
+        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -89,7 +89,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "38NLElD9BO1LyJEP7rynT4"
+    "fileId": "03ABsIl7VO1q0xvR3zh25S"
   },
   {
     "__type__": "cc.ModelBakeSettings",
@@ -120,7 +120,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "8aKb/sbu5B/5z8IoayRiJj",
+    "fileId": "addGRVNzdIdY+KubknvvVa",
     "targetOverrides": null
   }
 ]
