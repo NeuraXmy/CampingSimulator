@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "095080ef-3c1a-4247-b8ae-a65d2e7f138f",
+  "uuid": "8f7fc72b-8dd3-4695-8039-a28751c5e8c5",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "RodHead"
+    "syncNodeName": "TentCover"
   }
 }

@@ -74,6 +74,8 @@ export class MouseDraggable extends Component {
             if(event.keyCode == KeyCode.KEY_K) Quat.rotateX(this.target_rot, this.target_rot, -this.rotate_angle * Math.PI / 180);
             if(event.keyCode == KeyCode.KEY_J) Quat.rotateY(this.target_rot, this.target_rot, this.rotate_angle * Math.PI / 180);
             if(event.keyCode == KeyCode.KEY_L) Quat.rotateY(this.target_rot, this.target_rot, -this.rotate_angle * Math.PI / 180);
+            if(event.keyCode == KeyCode.KEY_N) Quat.rotateZ(this.target_rot, this.target_rot, this.rotate_angle * Math.PI / 180);
+            if(event.keyCode == KeyCode.KEY_M) Quat.rotateZ(this.target_rot, this.target_rot, -this.rotate_angle * Math.PI / 180);
             if(event.keyCode == KeyCode.KEY_O) this.target_rot = Quat.IDENTITY.clone();
         
         }, this);
