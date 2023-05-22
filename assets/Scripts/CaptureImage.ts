@@ -1,4 +1,4 @@
-import { _decorator, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate } from 'cc';
+import { _decorator,ModelComponent,primitives,utils,Sprite, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate, MeshRenderer, MotionStreak, resources, Vec3, v3 } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('CaptureImage')
@@ -18,8 +18,13 @@ export class CaptureImage extends Component {
     @property(Texture2D)
     temptexture1: Texture2D = null;
 
+    @property(Vec3)
+    pictureSize: Vec3 = null;
     @property(Texture2D)
     temptexture2: Texture2D = null;
+
+    @property(Node)
+    target: Node = null;
 
     rt: RenderTexture
 
@@ -43,21 +48,30 @@ export class CaptureImage extends Component {
         const anchorPoint = this.targetNode.getComponent(UITransform).anchorPoint;
         const worldPos = this.targetNode.getWorldPosition();
         this._buffer = this.rt.readPixels(Math.round(worldPos.x - width * anchorPoint.x), Math.round(worldPos.y - height * anchorPoint.y), width, height);
-        let block:Node = instantiate(this.cubePrfb);
-        block.setPosition(Math.random() * 2 - 1,-0.195,-10);
-        if (this.material && this.temptexture1) {
-            const textureAsset = this.temptexture1.getGFXTexture();
-            const textureHandle = textureAsset.getGLTextureHandle();
-            // 获取预制体中的节点
-            const prefabNode = block; // 如果组件直接挂载在预制体节点上
-            this.material.setProperty('texture', textureHandle);
-            // const prefabNode = this.node.parent; // 如果组件挂载在预制体节点的子节点上
-            console.info('Copy1');
-            // 遍历预制体节点及其子节点
+        this.copyCamera.targetTexture = this.rt;
+        const cubeNode = new Node('Cube');
+        const modelComps = cubeNode.addComponent(ModelComponent);
+        cubeNode.setScale(this.pictureSize);
+        // 创建正方体网格
+        const primitiveMesh = utils.createMesh(primitives.box());
+        modelComps.mesh = primitiveMesh;
+        const modelComp = cubeNode.getComponent(MeshRenderer);
         
-        }
-        this.node.addChild(block);
+        let material = new Material();
+        material.initialize({
+            effectName: 'builtin-unlit',
+            technique: 0,
+            defines: {
+                USE_TEXTURE: true,
+            },
+        });
+        material.setProperty('mainTexture', this.rt);
        
+        // 设置材质的贴图属性
+        // 创建正方体网格
+        cubeNode.setPosition(-1,-0.195,-10);
+        cubeNode.getComponent(MeshRenderer).setMaterial(material,0);
+        this.node.addChild(cubeNode);
     }
 
     private clearCapture() {
