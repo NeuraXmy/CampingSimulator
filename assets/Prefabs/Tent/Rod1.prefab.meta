@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "095080ef-3c1a-4247-b8ae-a65d2e7f138f",
+  "uuid": "3435d3db-6f5e-44dc-8d3b-6e79c15619cc",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "RodHead"
+    "syncNodeName": "Rod1"
   }
 }
