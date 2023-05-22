@@ -126,6 +126,62 @@
       "scenes": [
         "51a475d4-ec60-4258-87a4-f3e02ae82b6e@be07c"
       ]
+    },
+    "materials": {
+      "51a475d4-ec60-4258-87a4-f3e02ae82b6e@22e2a": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "6344a1ee-c7fd-4789-be43-f6e278dd25f9",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainColor": {
+              "__type__": "cc.Color",
+              "r": 127,
+              "g": 194,
+              "b": 101,
+              "a": 255
+            },
+            "hueColor": {
+              "__type__": "cc.Color",
+              "r": 201,
+              "g": 201,
+              "b": 174,
+              "a": 255
+            }
+          },
+          {}
+        ]
+      }
     }
   }
 }
