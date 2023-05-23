@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "8f7fc72b-8dd3-4695-8039-a28751c5e8c5",
+  "uuid": "31663e97-a39c-4dc3-8517-e8d0a8491991",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "TentCover"
+    "syncNodeName": "Tree3_lod1"
   }
 }

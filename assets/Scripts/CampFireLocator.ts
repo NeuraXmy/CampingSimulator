@@ -68,6 +68,7 @@ export class CampFireLocator extends Component {
         && this.fuel_items.size >= this.fuel_requirement) {
             if(this.need_windshield) {
                 let windshields = director.getScene().getComponentsInChildren(WindShield);
+                console.log(windshields)
                 for(let ws of windshields) {
                     if(ws.node.active) {
                         let ok: boolean = true
@@ -107,7 +108,8 @@ export class CampFireLocator extends Component {
     }
 
     update(deltaTime: number) {
-        this.campfire.active = this.check();
+        if(!this.campfire.active && this.check()) 
+            this.campfire.active = true;
     }
 
 

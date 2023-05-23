@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "c7a296ff-b03e-4c5b-b93c-c3cc88570b9a",
+  "uuid": "5c7ef17d-baa3-4901-8210-4df3dac37a21",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "Fastening"
+    "syncNodeName": "Tree2_lod1"
   }
 }

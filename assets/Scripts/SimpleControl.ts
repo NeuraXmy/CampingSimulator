@@ -10,8 +10,6 @@ export class SimpleControl extends Component {
     move_speed: number = 10;
     @property
     rotate_speed: number = 0.2;
-    @property
-    scroll_speed: number = 1;
 
     is_rotating: boolean = false;
     is_moving_forward: boolean = false;
@@ -20,7 +18,6 @@ export class SimpleControl extends Component {
     is_moving_right: boolean = false;
     is_moving_up: boolean = false;
     is_moving_down: boolean = false;
-    is_scrolling = false;
 
     start() {
         input.on(Input.EventType.MOUSE_DOWN, this.on_mouse_down, this);
@@ -28,7 +25,7 @@ export class SimpleControl extends Component {
         input.on(Input.EventType.MOUSE_MOVE, this.on_mouse_move, this)
         input.on(Input.EventType.KEY_DOWN, this.on_key_down, this);
         input.on(Input.EventType.KEY_UP, this.on_key_up, this);
-        //input.on(Input.EventType.MOUSE_WHEEL, this.on_mouse_wheel, this);
+        input.on(Input.EventType.MOUSE_WHEEL, this.on_mouse_wheel, this);
     }
 
     on_mouse_down(event: EventMouse) {
@@ -42,7 +39,6 @@ export class SimpleControl extends Component {
     on_mouse_move(event: EventMouse) {
         if(this.is_rotating && this.camera) {
             let delta = v2(event.getDelta());
-            console.log(delta);
             this.camera.node.eulerAngles = this.camera.node.eulerAngles
                 .add3f(-delta.y * this.rotate_speed, delta.x * this.rotate_speed, 0);
         }
@@ -51,8 +47,8 @@ export class SimpleControl extends Component {
     on_mouse_wheel(event: EventMouse) {
         if(this.camera) {
             let delta = event.getScrollY();
-            let v = this.camera.node.forward.multiplyScalar(delta * this.scroll_speed);
-            this.camera.node.position = this.camera.node.position.add(v);
+            this.camera.node.position = this.camera.node.position
+                .add3f(0, delta * this.move_speed, 0);
         }
     }
 

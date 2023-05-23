@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "6afe6caa-4865-4e20-b263-8dc4a7caa05b",
+  "uuid": "9149b92f-7a65-42c2-b310-cc68803b4717",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "RodFull"
+    "syncNodeName": "Tree1_lod1"
   }
 }

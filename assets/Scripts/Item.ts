@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Enum, Node } from 'cc';
+import { _decorator, Component, Enum, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
 export enum ItemType {
@@ -11,12 +11,6 @@ export enum ItemType {
     Log,
 
     WindShield,
-    TentCover,
-    TentCompleted,
-    RodFull,
-    RodHead,
-    RodTail,
-    Fastening,
 }
 
 @ccclass('Item')
@@ -31,16 +25,6 @@ export class Item extends Component {
 
     update(deltaTime: number) {
         
-    }
-
-    static find_nodes(type: ItemType, parent: Node = director.getScene()) : Set<Node> {
-        let ret = new Set<Node>();
-        for(let item of parent.getComponentsInChildren(Item)) {
-            if(item.type == type) {
-                ret.add(item.node);
-            }
-        }
-        return ret;
     }
 }
 
