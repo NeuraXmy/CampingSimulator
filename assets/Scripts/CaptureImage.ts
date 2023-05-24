@@ -1,4 +1,4 @@
-import { _decorator,ModelComponent,primitives,utils,Sprite, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate, MeshRenderer, MotionStreak, resources, v3, Vec3 } from 'cc';
+import { _decorator,ModelComponent,primitives,utils,Sprite, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate, MeshRenderer, MotionStreak, resources, v3, Vec3, BoxCollider, RigidBody } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('CaptureImage')
@@ -6,24 +6,9 @@ export class CaptureImage extends Component {
     @property(Camera)
     copyCamera: Camera = null;
 
-    @property({type: Prefab})
-    cubePrfb: Prefab | null = null;
-
-    @property(Material)
-    material: Material = null; // 需要修改的材质
-
-    @property(Node)
-    targetNode: Node = null!;
-
-    @property(Texture2D)
-    temptexture1: Texture2D = null;
-
     @property(Vec3)
     pictureSize: Vec3 = null;
    
-    @property(Texture2D)
-    temptexture2: Texture2D = null;
-
     @property(Node)
     target: Node = null;
 
@@ -54,6 +39,8 @@ export class CaptureImage extends Component {
         // this._buffer = this.rt.readPixels(Math.round(worldPos.x - width * anchorPoint.x), Math.round(worldPos.y - height * anchorPoint.y), width, height);
         this.copyCamera.targetTexture = this.rt;
         const cubeNode = new Node('Cube');
+        cubeNode.addComponent(BoxCollider);
+        cubeNode.addComponent(RigidBody);
         const modelComps = cubeNode.addComponent(ModelComponent);
         cubeNode.setScale(this.pictureSize);
         // 创建正方体网格
@@ -71,15 +58,13 @@ export class CaptureImage extends Component {
         material.setProperty('mainTexture', this.rt);
         // 设置材质的贴图属性
         // 创建正方体网格
+        let myposition = this.target.position
+        myposition.add3f(0,0.1,1);
         cubeNode.setPosition(this.target.position);
         cubeNode.getComponent(MeshRenderer).setMaterial(material,0);
         this.node.addChild(cubeNode);
+        console.log("picture")
     }
 
-    private clearCapture() {
-        if (this._image) {
-            game.container!.removeChild(this._image)
-        }
-        this._image = null;
-    }
+
 }
