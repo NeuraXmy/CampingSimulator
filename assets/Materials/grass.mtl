@@ -13,8 +13,7 @@
       "USE_INSTANCING": true,
       "USE_MASK_CHANNEL_UV": true,
       "USE_MAIN_TXTURE": true,
-      "USE_BEND": true,
-      "USE_FIXED_NORMAL": true
+      "USE_BEND": true
     },
     {}
   ],
@@ -47,7 +46,7 @@
         "__uuid__": "2f260267-3fc3-4872-96df-bca9663f08a6@6c48a",
         "__expectedType__": "cc.Texture2D"
       },
-      "randMapTiling": 0.015,
+      "randMapTiling": 0.15,
       "windMap": {
         "__uuid__": "2f260267-3fc3-4872-96df-bca9663f08a6@6c48a",
         "__expectedType__": "cc.Texture2D"
@@ -62,7 +61,7 @@
       "windRandVertex": 2.4,
       "windRandObjectStrength": 1.009,
       "windGustStrength": 0.25,
-      "windGustFrequency": 1,
+      "windGustFrequency": 0.1,
       "windGustTint": 1.35,
       "mainTexture": {
         "__uuid__": "ff253b97-af4b-489a-a39c-29b96b0df1a4@6c48a",
@@ -82,7 +81,7 @@
         "b": 172,
         "a": 255
       },
-      "ambientOcclusion": -0.096,
+      "ambientOcclusion": 0,
       "randomDarken": 0,
       "translucency": 2.47
     },

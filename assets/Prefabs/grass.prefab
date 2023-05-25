@@ -22,7 +22,11 @@
       }
     ],
     "_active": true,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
     "_prefab": {
       "__id__": 10
     },
@@ -67,19 +71,16 @@
     "_components": [
       {
         "__id__": 3
-      },
-      {
-        "__id__": 6
       }
     ],
     "_prefab": {
-      "__id__": 9
+      "__id__": 6
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -0.461,
       "y": 0,
-      "z": 0
+      "z": 0.112
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -126,7 +127,7 @@
       "__id__": 5
     },
     "_mesh": {
-      "__uuid__": "f4b5acd5-c5d8-480c-a851-7c193a345f82@ef5e1",
+      "__uuid__": "39046e55-2b97-4ba4-a7b6-5832bb81e78a@ef5e1",
       "__expectedType__": "cc.Mesh"
     },
     "_shadowCastingMode": 0,
@@ -162,44 +163,6 @@
     "_probeCubemap": null
   },
   {
-    "__type__": "cc.LODGroup",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": false,
-    "__prefab": {
-      "__id__": 7
-    },
-    "_localBoundaryCenter": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_objectSize": 1,
-    "_LODs": [
-      {
-        "__id__": 8
-      }
-    ],
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "76zakba+tCM7t3KxT6LdMQ"
-  },
-  {
-    "__type__": "cc.LOD",
-    "_screenUsagePercentage": 0.05,
-    "_renderers": [
-      {
-        "__id__": 3
-      }
-    ]
-  },
-  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
@@ -211,6 +174,44 @@
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
+  },
+  {
+    "__type__": "cc.LODGroup",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 8
+    },
+    "_localBoundaryCenter": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_objectSize": 1,
+    "_LODs": [
+      {
+        "__id__": 9
+      }
+    ],
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "04rsa7XENBB4yaf5I1yub3"
+  },
+  {
+    "__type__": "cc.LOD",
+    "_screenUsagePercentage": 0.05,
+    "_renderers": [
+      {
+        "__id__": 3
+      }
+    ]
   },
   {
     "__type__": "cc.PrefabInfo",

@@ -14,7 +14,7 @@ export class NatureItemGenerator extends Component {
     @property({type: Vec2})
     grid_size: Vec2 = v2(1.0, 1.0)
 
-    @property({type: CCInteger})
+    @property({type: CCFloat})
     basic_density: number = 1
 
     @property({type: Rect})
