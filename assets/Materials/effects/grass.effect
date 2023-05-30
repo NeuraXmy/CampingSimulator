@@ -319,7 +319,7 @@ CCProgram fs %{
     #endif
 
     // translucency
-    Translucency(viewDirection, translucency, shadowAttenuation, final.rgb);
+    // Translucency(viewDirection, translucency, shadowAttenuation, final.rgb);
     
     // wind gust color
     WindSettings wind = getWinSettings(v_color.r);
