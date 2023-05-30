@@ -61,8 +61,8 @@
       "windRandVertex": 2.4,
       "windRandObjectStrength": 1.009,
       "windGustStrength": 0.25,
-      "windGustFrequency": 0.1,
-      "windGustTint": 1.35,
+      "windGustFrequency": 0.05,
+      "windGustTint": 1,
       "mainTexture": {
         "__uuid__": "ff253b97-af4b-489a-a39c-29b96b0df1a4@6c48a",
         "__expectedType__": "cc.Texture2D"
