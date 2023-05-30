@@ -1,4 +1,4 @@
-import { _decorator,ModelComponent,primitives,utils,Sprite, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate, MeshRenderer, MotionStreak, resources, v3, Vec3, BoxCollider, RigidBody } from 'cc';
+import { _decorator,ModelComponent,primitives,utils,Sprite, Prefab,SpriteComponent,UIRenderer,Material,SpriteFrame, Component, Node, Camera, RenderTexture, view, UITransform, log, game, screen, NodeEventType, Texture2D, instantiate, MeshRenderer, MotionStreak, resources, v3, Vec3, BoxCollider, RigidBody, director } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('CaptureImage')
@@ -58,11 +58,10 @@ export class CaptureImage extends Component {
         material.setProperty('mainTexture', this.rt);
         // 设置材质的贴图属性
         // 创建正方体网格
-        let myposition = this.target.position
-        myposition.add3f(0,0.1,1);
-        cubeNode.setPosition(this.target.position);
+        let myposition = this.target.getWorldPosition();
+        cubeNode.setWorldPosition(myposition);
         cubeNode.getComponent(MeshRenderer).setMaterial(material,0);
-        this.node.addChild(cubeNode);
+        this.node.addChild(director.getScene());
         console.log("picture")
     }
 
