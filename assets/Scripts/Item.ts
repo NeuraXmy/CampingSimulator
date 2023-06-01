@@ -19,6 +19,8 @@ export enum ItemType {
     Fastening,
 
     LighterFire,
+
+    Pin,
 }
 
 @ccclass('Item')
