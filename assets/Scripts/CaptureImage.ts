@@ -61,7 +61,7 @@ export class CaptureImage extends Component {
         let myposition = this.target.getWorldPosition();
         cubeNode.setWorldPosition(myposition);
         cubeNode.getComponent(MeshRenderer).setMaterial(material,0);
-        this.node.addChild(director.getScene());
+        director.getScene().addChild(cubeNode);
         console.log("picture")
     }
 
