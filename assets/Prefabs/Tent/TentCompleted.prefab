@@ -239,7 +239,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "cbf4f6a0-fb80-43e5-9598-91fb2e5a05ba@8d883",
+        "__uuid__": "a8600126-b832-4c2f-a736-a7ae556c2a95",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1211,7 +1211,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "cbf4f6a0-fb80-43e5-9598-91fb2e5a05ba@7a3ca",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2072,7 +2072,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "cbf4f6a0-fb80-43e5-9598-91fb2e5a05ba@a7424",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2471,7 +2471,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "cbf4f6a0-fb80-43e5-9598-91fb2e5a05ba@cd3cd",
+        "__uuid__": "17b71c15-d77d-4a9d-97db-e5f891f3dd9e",
         "__expectedType__": "cc.Material"
       }
     ],
