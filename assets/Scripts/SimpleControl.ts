@@ -42,7 +42,6 @@ export class SimpleControl extends Component {
     on_mouse_move(event: EventMouse) {
         if(this.is_rotating && this.camera) {
             let delta = v2(event.getDelta());
-            console.log(delta);
             this.camera.node.eulerAngles = this.camera.node.eulerAngles
                 .add3f(-delta.y * this.rotate_speed, delta.x * this.rotate_speed, 0);
         }

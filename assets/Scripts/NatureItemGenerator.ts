@@ -56,6 +56,9 @@ export class NatureItemGenerator extends Component {
     @property({type: Boolean})
     fit_slope: boolean = false
 
+    @property({type: CCFloat})
+    distance_limit: number = 1e9
+
     
     start() {
         this.generate();
@@ -121,6 +124,7 @@ export class NatureItemGenerator extends Component {
         for (let i = 0; i < x_grid_n; i++) {
             for (let j = 0; j < z_grid_n; j++) {
                 let pos = this.get_grid_center(i, j)
+                if(pos.length() > this.distance_limit) continue;
 
                 // apply mask to num per grid
                 let num = this.basic_density

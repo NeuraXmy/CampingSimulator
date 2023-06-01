@@ -40,7 +40,7 @@ export class Item extends Component {
     static find_nodes(type: ItemType, parent: Node = director.getScene()) : Set<Node> {
         let ret = new Set<Node>();
         for(let item of parent.getComponentsInChildren(Item)) {
-            if(item.type == type) {
+            if(item.type == type && item.node.active) {
                 ret.add(item.node);
             }
         }

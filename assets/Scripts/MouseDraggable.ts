@@ -1,4 +1,4 @@
-import { _decorator, Component, PhysicsSystem, director, Camera, Input, input, KeyCode, CCFloat, Vec3, Quat, Button, EventMouse } from 'cc';
+import { _decorator, Component, PhysicsSystem, director, Camera, Input, input, KeyCode, CCFloat, Vec3, Quat, Button, EventMouse, RigidBody, isValid } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MouseDraggable')
@@ -9,22 +9,24 @@ export class MouseDraggable extends Component {
     @property({type: CCFloat})
     rotate_angle: number = 45;
 
-    isDragging = false;
-    camera = null;
-    mouse_x = 0;
-    mouse_y = 0;
-    distance = 0;
+    private isDragging = false;
+    private camera = null;
+    private mouse_x = 0;
+    private mouse_y = 0;
+    private distance = 0;
 
-    is_pulling = false;
-    is_pushing = false;
+    private is_pulling = false;
+    private is_pushing = false;
 
-    target_rot = new Quat();
+    private target_rot = new Quat();
+
+    private body_type = RigidBody.Type.DYNAMIC;
 
 
     sync_pos() {
         let ray = this.camera.screenPointToRay(this.mouse_x, this.mouse_y);
         let pos = ray.o.add(ray.d.multiplyScalar(this.distance));
-        this.node.setPosition(pos);
+        this.node.setWorldPosition(pos);
     }
 
     start() {
@@ -38,13 +40,26 @@ export class MouseDraggable extends Component {
             if(event.getButton() == EventMouse.BUTTON_LEFT) {
                 if(!this.isDragging) {
                     let ray = this.camera.screenPointToRay(event.getLocationX(), event.getLocationY());
-                    if (PhysicsSystem.instance.raycastClosest(ray) && PhysicsSystem.instance.raycastClosestResult.collider.node === this.node) {
-                        console.log("Drag started: " + this.node.name);
-                        this.isDragging = true;
-                        this.distance = this.node.position.subtract(ray.o).length();
-                        this.mouse_x = event.getLocationX();
-                        this.mouse_y = event.getLocationY();
-                        this.target_rot = this.node.rotation.clone();
+                    if (PhysicsSystem.instance.raycast(ray)) {
+                        let results = PhysicsSystem.instance.raycastResults;
+                        results = results.sort((a, b) => a.distance - b.distance);
+                        for (let result of results) {
+                            if(!result.collider.isTrigger) {
+                                if(result.collider.node === this.node) {
+                                    console.log("Drag started: " + this.node.name);
+                                    this.isDragging = true;
+                                    this.distance = this.node.worldPosition.subtract(ray.o).length();
+                                    this.mouse_x = event.getLocationX();
+                                    this.mouse_y = event.getLocationY();
+                                    this.target_rot = this.node.rotation.clone();
+                                    if(this.getComponent(RigidBody)) {
+                                        this.body_type = this.getComponent(RigidBody).type;
+                                        this.getComponent(RigidBody).type = RigidBody.Type.STATIC;
+                                    }
+                                }
+                                break;
+                            }
+                        }
                     }
                 }
             }
@@ -62,6 +77,9 @@ export class MouseDraggable extends Component {
                 if(this.isDragging) {
                     console.log("Drag ended: " + this.node.name);
                     this.isDragging = false;
+                    if(this.getComponent(RigidBody)) {
+                        this.getComponent(RigidBody).type = this.body_type;
+                    }
                 }
             }
         }, this);
@@ -86,7 +104,7 @@ export class MouseDraggable extends Component {
     }
 
     update(deltaTime: number) {
-        if(this.isDragging) {
+        if(isValid(this, true) && this.isDragging) {
             if(this.is_pulling) this.distance += this.push_pull_speed * deltaTime;
             if(this.is_pushing) this.distance -= this.push_pull_speed * deltaTime;
             this.distance = Math.max(0, this.distance);

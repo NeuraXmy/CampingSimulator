@@ -1,4 +1,4 @@
-import { _decorator, CCFloat, Component, instantiate, Node, Prefab, Vec3 } from 'cc';
+import { _decorator, CCFloat, Component, instantiate, isValid, Node, Prefab, Vec3 } from 'cc';
 import { Item, ItemType } from './Item';
 const { ccclass, property } = _decorator;
 
@@ -20,19 +20,18 @@ export class Fastening extends Component {
     @property({type: Prefab})
     tent_prefab: Prefab = null;
 
-    rods: Node[] = null;
-
     start() {
-        this.rods = this.node.getChildByName("Rods").children;
-        for(let rod of this.rods) {
+        let rods = this.node.getChildByName("Rods").children;
+        for(let rod of rods) {
             rod.active = false;
         }
     }
 
     update(deltaTime: number) {
-        for(let rod of this.rods) {
+        let rods = this.node.getChildByName("Rods").children;
+        for(let rod of rods) {
             if(!rod.active) {
-                for(let target of Item.find_nodes(ItemType.RodFull)) {
+                for(let target of Item.find_nodes(ItemType.RodFull)) if(isValid(target, true)) {
                     let targetpos = target.getWorldPosition().clone();
                     let rodpos = rod.getWorldPosition().clone();
                     let dist = Vec3.distance(targetpos, rodpos);
@@ -55,31 +54,32 @@ export class Fastening extends Component {
                 }
             }
         }
+        if(rods.every((rod) => rod.active)) {
+            for(let cover of Item.find_nodes(ItemType.TentCover)) {
+                let coverpos = cover.getWorldPosition().clone();
+                let fasteningpos = this.node.getWorldPosition().clone();
+                let dist = Vec3.distance(coverpos, fasteningpos);
 
-        for(let cover of Item.find_nodes(ItemType.TentCover)) {
-            let coverpos = cover.getWorldPosition().clone();
-            let fasteningpos = this.node.getWorldPosition().clone();
-            let dist = Vec3.distance(coverpos, fasteningpos);
+                let coverrot = Vec3.ZERO.clone();
+                let fasteningrot = Vec3.ZERO.clone();
+                cover.getWorldRotation().getEulerAngles(coverrot);
+                this.node.getWorldRotation().getEulerAngles(fasteningrot);
+                let rot = 0;
+                rot = Math.max(rot, Math.abs(coverrot.x - fasteningrot.x));
+                rot = Math.max(rot, Math.abs(coverrot.y - fasteningrot.y));
+                rot = Math.max(rot, Math.abs(coverrot.z - fasteningrot.z));
 
-            let coverrot = Vec3.ZERO.clone();
-            let fasteningrot = Vec3.ZERO.clone();
-            cover.getWorldRotation().getEulerAngles(coverrot);
-            this.node.getWorldRotation().getEulerAngles(fasteningrot);
-            let rot = 0;
-            rot = Math.max(rot, Math.abs(coverrot.x - fasteningrot.x));
-            rot = Math.max(rot, Math.abs(coverrot.y - fasteningrot.y));
-            rot = Math.max(rot, Math.abs(coverrot.z - fasteningrot.z));
-
-            if(dist < this.cover_distance_threshold && rot < this.cover_rotation_threshold) {
-                console.log(this.node.name + " connected to " + cover.name)
-                let tent = instantiate(this.tent_prefab);
-                tent.setPosition(cover.getWorldPosition());
-                tent.setRotation(cover.getWorldRotation());
-                tent.setScale(cover.getWorldScale());
-                tent.setParent(cover.getParent());
-                
-                cover.destroy();
-                this.node.destroy();
+                if(dist < this.cover_distance_threshold && rot < this.cover_rotation_threshold) {
+                    console.log(this.node.name + " connected to " + cover.name)
+                    let tent = instantiate(this.tent_prefab);
+                    tent.setPosition(cover.getWorldPosition());
+                    tent.setRotation(cover.getWorldRotation());
+                    tent.setScale(cover.getWorldScale());
+                    tent.setParent(cover.getParent());
+                    
+                    cover.active = false;
+                    this.node.active = false;
+                }
             }
         }
     }

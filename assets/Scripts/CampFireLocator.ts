@@ -24,6 +24,8 @@ export class CampFireLocator extends Component {
     @property({type: CCBoolean})
     need_windshield: boolean = true
 
+    @property({type: CCBoolean})
+    need_lightfire: boolean = true
     @property({type: CCFloat})
     lightfire_distance: number = 1.0
 
@@ -117,7 +119,7 @@ export class CampFireLocator extends Component {
                 let dist = v3(lf.worldPosition).subtract(this.node.worldPosition).length();
                 min_dist = Math.min(min_dist, dist);
             }
-            if(min_dist < this.lightfire_distance) {
+            if(!this.need_lightfire || min_dist < this.lightfire_distance) {
                 this.campfire.active = true;
                 this.outerIndicator.active = false;
                 this.innerIndicator.active = false;
