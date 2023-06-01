@@ -43,6 +43,9 @@ export class shopSystem extends Component {
         let child = children[this.chindIndex];
        
     }
+    close(){
+        this.node.active = false;
+    }
     buyThing(){
         let siblingNode: Node = null!;
         for (var i = 0; i <  this.targetNode.parent.children.length; i++) {
