@@ -24,6 +24,9 @@ export class CampFireLocator extends Component {
     @property({type: CCBoolean})
     need_windshield: boolean = true
 
+    @property({type: CCFloat})
+    lightfire_distance: number = 1.0
+
     outer_items = new Set<Node>();
     inner_items = new Set<Node>();
     fuel_items = new Set<Node>();
@@ -107,7 +110,19 @@ export class CampFireLocator extends Component {
     }
 
     update(deltaTime: number) {
-        this.campfire.active = this.check();
+        if(!this.campfire.active && this.check()) {
+            let lightfires = Item.find_nodes(ItemType.LighterFire);
+            let min_dist = 1e9;
+            for(let lf of lightfires) if(lf.active) {
+                let dist = v3(lf.worldPosition).subtract(this.node.worldPosition).length();
+                min_dist = Math.min(min_dist, dist);
+            }
+            if(min_dist < this.lightfire_distance) {
+                this.campfire.active = true;
+                this.outerIndicator.active = false;
+                this.innerIndicator.active = false;
+            }
+        }
     }
 
 

@@ -17,6 +17,10 @@ export enum ItemType {
     RodHead,
     RodTail,
     Fastening,
+
+    LighterFire,
+
+    Pin,
 }
 
 @ccclass('Item')
