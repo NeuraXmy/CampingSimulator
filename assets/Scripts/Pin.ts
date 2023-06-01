@@ -14,7 +14,7 @@ export class Pin extends Component {
 
     update(deltaTime: number) {
         if(this.pinned) {
-            this.node.getComponent(RigidBody).type = RigidBody.Type.Static;
+            this.node.getComponent(RigidBody).type = RigidBody.Type.STATIC;
             this.node.setWorldPosition(this.pinned_pos);
             this.node.setWorldRotation(this.pinned_rot);
         }
