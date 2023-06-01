@@ -275,7 +275,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -391,7 +391,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -694,7 +694,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],

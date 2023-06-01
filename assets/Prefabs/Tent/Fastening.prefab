@@ -182,7 +182,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "15eb2851-58fc-4666-939b-2523718f8540@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -298,7 +298,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "15eb2851-58fc-4666-939b-2523718f8540@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -681,7 +681,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1100,7 +1100,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1485,7 +1485,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1904,7 +1904,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2289,7 +2289,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2708,7 +2708,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -3093,7 +3093,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -3512,7 +3512,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d22535b6-cf0a-48a0-8c69-f5c48b40b9b1@8d883",
+        "__uuid__": "894701ea-68ef-4d3c-a854-41b0d61e9fdb",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -3764,8 +3764,10 @@
     "__prefab": {
       "__id__": 149
     },
-    "distance_threshold": 2,
-    "rotation_threshold": 9999,
+    "rod_distance_threshold": 2,
+    "rod_rotation_threshold": 9999,
+    "cover_distance_threshold": 0.5,
+    "cover_rotation_threshold": 9999,
     "tent_prefab": {
       "__uuid__": "d4377ed3-c08b-44e9-85f3-12a78282ddec",
       "__expectedType__": "cc.Prefab"
