@@ -7,7 +7,7 @@
     "__uuid__": "1baf0fc9-befa-459c-8bdd-af1a450a0319",
     "__expectedType__": "cc.EffectAsset"
   },
-  "_techIdx": 0,
+  "_techIdx": 1,
   "_defines": [
     {},
     {},
@@ -46,10 +46,10 @@
     {
       "mainColor": {
         "__type__": "cc.Color",
-        "r": 209,
-        "g": 190,
-        "b": 141,
-        "a": 255
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 53
       },
       "roughness": 0.8,
       "metallic": 0.6
