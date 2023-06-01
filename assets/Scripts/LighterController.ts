@@ -15,7 +15,7 @@ export class LighterController extends Component {
     show(){
         // console.log("lll");
         if(this.particle.active)
-        this.particle.active = false;
+            this.particle.active = false;
         else
         {
             this.particle.active = true;
