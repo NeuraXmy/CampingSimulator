@@ -1752,17 +1752,23 @@
               "__uuid__": "b7c95136-857e-4d16-9c30-94e90acf131f@7d6ab",
               "__expectedType__": "cc.Texture2D"
             },
-            "albedoScale": 1.6,
+            "mainColor": {
+              "__type__": "cc.Color",
+              "r": 102,
+              "g": 151,
+              "b": 118,
+              "a": 255
+            },
             "emissive": {
               "__type__": "cc.Color",
-              "r": 75,
-              "g": 78,
-              "b": 50,
+              "r": 31,
+              "g": 32,
+              "b": 25,
               "a": 252
             },
-            "emissiveScale": 0.8,
+            "emissiveScale": 0,
             "shininessExponent": 0,
-            "specularFactor": 0.14454545080661774,
+            "specularFactor": 0,
             "transparencyMap": {
               "__uuid__": "b7c95136-857e-4d16-9c30-94e90acf131f@43a9c",
               "__expectedType__": "cc.Texture2D"
