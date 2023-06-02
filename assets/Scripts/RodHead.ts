@@ -4,9 +4,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('RodHead')
 export class RodHead extends Component {
-    
-    @property({type: Prefab})
-    rodfull_prefab: Prefab = null;
 
     @property({type: CCFloat})
     connect_distance: number = 2;
@@ -38,12 +35,13 @@ export class RodHead extends Component {
         });
         
         for(let tail of tails) {
-            if(tail.active && this.check(head, tail)) {
-                console.log(this.node.name + " connected to " + tail.name)
-                head.active = false
-                tail.active = false
-                full.active = true
-                full.worldPosition = head.worldPosition.clone()
+            if(this.check(head, tail)) {
+                console.log(this.node.name + " connected to " + tail.name);
+                head.active = false;
+                tail.active = false;
+                full.active = true;
+                full.worldPosition = head.worldPosition.clone();
+                full.worldRotation = head.worldRotation.clone();
                 break;
             }
         }

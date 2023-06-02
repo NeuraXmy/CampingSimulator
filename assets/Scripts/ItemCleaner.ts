@@ -1,4 +1,4 @@
-import { _decorator, CCFloat, CCInteger, Collider, Component, Enum, Node, Vec3 } from 'cc';
+import { _decorator, assert, CCFloat, CCInteger, Collider, Component, Enum, Node, Vec3 } from 'cc';
 import { Item, ItemType } from './Item';
 const { ccclass, property } = _decorator;
 
@@ -20,16 +20,20 @@ class CleanTask {
     clean_radius: number = 1.0;
 
     public clean(center: Vec3) {
-        let nodes = Item.find_nodes(this.type);
+        let count = 0
+        let nodes = [...Item.find_nodes(this.type)];
         for(let node of nodes) {
             let dist = node.worldPosition.clone().subtract(center).length();
             if(this.strategy == Strategy.CleanCircleInner && dist < this.clean_radius) {
-                node.destroy();
+                node.active = false;
+                count += 1;
             }
             if(this.strategy == Strategy.CleanCircleOuter && dist > this.clean_radius) {
-                node.destroy();
+                node.active = false;
+                count += 1;
             }
         }
+        console.log("Cleaned " + count + " of type " + this.type);
     }
 }
 
@@ -42,7 +46,7 @@ export class ItemCleaner extends Component {
     @property({type: CCInteger})
     delay_frame: number = 1;
 
-    current_frame = 0
+    private current_frame = 0
 
     start() {
         
@@ -52,7 +56,7 @@ export class ItemCleaner extends Component {
         this.current_frame += 1;
         if(this.current_frame == this.delay_frame) 
             for(let task of this.tasks) 
-                task.clean(this.node.worldPosition);
+                task.clean(this.node.worldPosition.clone());
     }
 }
 

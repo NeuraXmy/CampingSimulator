@@ -32,7 +32,7 @@ export class MouseDraggable extends Component {
     start() {
         this.camera = director.getScene()?.getChildByName("Main Camera")?.getComponent(Camera);
         if (!this.camera) {
-            console.warn("Draggable Camera not found");
+            // console.warn("Draggable Camera not found");
             return;
         }
 

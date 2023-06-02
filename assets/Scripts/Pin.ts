@@ -22,7 +22,8 @@ export class Pin extends Component {
 
     public pin() {
         this.pinned = true;
-        this.pinned_pos = this.node.worldPosition;
+        this.pinned_pos = this.node.worldPosition.clone();
+        this.pinned_pos.y -= 0.3;
         this.pinned_rot = Quat.IDENTITY.clone();
     }
 }

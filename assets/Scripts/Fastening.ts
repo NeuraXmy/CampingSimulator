@@ -11,10 +11,10 @@ export class Fastening extends Component {
     @property({type: CCFloat})
     rod_rotation_threshold: number = 9999;
 
-    @property({type: Prefab})
+    @property({type: CCFloat})
     cover_distance_threshold: number = 0.5;
 
-    @property({type: Prefab})
+    @property({type: CCFloat})
     cover_rotation_threshold: number = 9999;
 
     @property({type: Prefab})
@@ -56,14 +56,14 @@ export class Fastening extends Component {
         }
         if(rods.every((rod) => rod.active)) {
             for(let cover of Item.find_nodes(ItemType.TentCover)) {
-                let coverpos = cover.getWorldPosition().clone();
-                let fasteningpos = this.node.getWorldPosition().clone();
+                let coverpos = cover.worldPosition.clone();
+                let fasteningpos = this.node.worldPosition.clone();
                 let dist = Vec3.distance(coverpos, fasteningpos);
 
                 let coverrot = Vec3.ZERO.clone();
                 let fasteningrot = Vec3.ZERO.clone();
-                cover.getWorldRotation().getEulerAngles(coverrot);
-                this.node.getWorldRotation().getEulerAngles(fasteningrot);
+                cover.worldRotation.getEulerAngles(coverrot);
+                this.node.worldRotation.getEulerAngles(fasteningrot);
                 let rot = 0;
                 rot = Math.max(rot, Math.abs(coverrot.x - fasteningrot.x));
                 rot = Math.max(rot, Math.abs(coverrot.y - fasteningrot.y));
@@ -72,9 +72,9 @@ export class Fastening extends Component {
                 if(dist < this.cover_distance_threshold && rot < this.cover_rotation_threshold) {
                     console.log(this.node.name + " connected to " + cover.name)
                     let tent = instantiate(this.tent_prefab);
-                    tent.setPosition(cover.getWorldPosition());
-                    tent.setRotation(cover.getWorldRotation());
-                    tent.setScale(cover.getWorldScale());
+                    tent.setPosition(cover.worldPosition.clone());
+                    tent.setRotation(cover.worldRotation.clone());
+                    tent.setScale(cover.worldScale.clone());
                     tent.setParent(cover.getParent());
                     
                     cover.active = false;

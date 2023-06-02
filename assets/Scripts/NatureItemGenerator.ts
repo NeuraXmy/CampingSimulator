@@ -114,8 +114,6 @@ export class NatureItemGenerator extends Component {
     }
 
     generate() {
-        console.log(`${typeof this.density_mask}`)
-
         let x_grid_n = Math.floor(this.region.width  / this.grid_size.x)
         let z_grid_n = Math.floor(this.region.height / this.grid_size.y)
 

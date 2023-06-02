@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Enum, Node } from 'cc';
+import { _decorator, Component, director, Enum, isValid, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
 export enum ItemType {
@@ -40,7 +40,7 @@ export class Item extends Component {
     static find_nodes(type: ItemType, parent: Node = director.getScene()) : Set<Node> {
         let ret = new Set<Node>();
         for(let item of parent.getComponentsInChildren(Item)) {
-            if(item.type == type && item.node.active) {
+            if(isValid(item.node, true) && item.node.activeInHierarchy && item.type == type) {
                 ret.add(item.node);
             }
         }
