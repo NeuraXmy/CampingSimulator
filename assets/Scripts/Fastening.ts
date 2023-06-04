@@ -31,7 +31,7 @@ export class Fastening extends Component {
     update(deltaTime: number) {
         let rods = this.node.getChildByName("Rods").children;
         for(let rod of rods) {
-            if(!rod.active && !rod.getComponent(RodFull).hovering) {
+            if(!rod.active) {
                 for(let target of Item.find_nodes(ItemType.RodFull)) if(isValid(target, true)) {
                     let targetpos = target.getWorldPosition().clone();
                     let rodpos = rod.getWorldPosition().clone();
