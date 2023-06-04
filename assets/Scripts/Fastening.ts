@@ -31,28 +31,29 @@ export class Fastening extends Component {
     update(deltaTime: number) {
         let rods = this.node.getChildByName("Rods").children;
         for(let rod of rods) {
-            if(!rod.active && !rod.getComponent(RodFull).hovering) {
-                for(let target of Item.find_nodes(ItemType.RodFull)) if(isValid(target, true)) {
-                    let targetpos = target.getWorldPosition().clone();
-                    let rodpos = rod.getWorldPosition().clone();
-                    let dist = Vec3.distance(targetpos, rodpos);
+            if(!rod.active) {
+                for(let target of Item.find_nodes(ItemType.RodFull)) 
+                    if(isValid(target, true) && !target.getComponent(RodFull).hovering) {
+                        let targetpos = target.getWorldPosition().clone();
+                        let rodpos = rod.getWorldPosition().clone();
+                        let dist = Vec3.distance(targetpos, rodpos);
 
-                    let targetrot = Vec3.ZERO.clone();
-                    let rodrot = Vec3.ZERO.clone();
-                    target.getWorldRotation().getEulerAngles(targetrot);
-                    rod.getWorldRotation().getEulerAngles(rodrot);
-                    let rot = 0;
-                    rot = Math.max(rot, Math.abs(targetrot.x - rodrot.x));
-                    rot = Math.max(rot, Math.abs(targetrot.y - rodrot.y));
-                    rot = Math.max(rot, Math.abs(targetrot.z - rodrot.z));
-                    
-                    if(dist < this.rod_distance_threshold && rot < this.rod_rotation_threshold) {
-                        console.log(this.node.name + " connected to " + target.name)
-                        rod.active = true;
-                        target.destroy();
-                        break;
+                        let targetrot = Vec3.ZERO.clone();
+                        let rodrot = Vec3.ZERO.clone();
+                        target.getWorldRotation().getEulerAngles(targetrot);
+                        rod.getWorldRotation().getEulerAngles(rodrot);
+                        let rot = 0;
+                        rot = Math.max(rot, Math.abs(targetrot.x - rodrot.x));
+                        rot = Math.max(rot, Math.abs(targetrot.y - rodrot.y));
+                        rot = Math.max(rot, Math.abs(targetrot.z - rodrot.z));
+                        
+                        if(dist < this.rod_distance_threshold && rot < this.rod_rotation_threshold) {
+                            console.log(this.node.name + " connected to " + target.name)
+                            rod.active = true;
+                            target.destroy();
+                            break;
+                        }
                     }
-                }
             }
         }
         if(rods.every((rod) => rod.active)) {
