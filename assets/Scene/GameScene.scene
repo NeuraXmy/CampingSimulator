@@ -408,7 +408,7 @@
         "__id__": 10
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 12
@@ -20440,7 +20440,7 @@
         "__id__": 529
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 582
@@ -20840,7 +20840,7 @@
     "_visibility": -325058561,
     "_targetTexture": null,
     "_cameraType": 2,
-    "_trackingType": 0,
+    "_trackingType": 1,
     "_id": "0azY8R689FaqztPqxwzu08"
   },
   {
@@ -21916,7 +21916,7 @@
     "propertyPath": [
       "_active"
     ],
-    "value": false
+    "value": true
   },
   {
     "__type__": "cc.TargetOverrideInfo",

@@ -52,7 +52,7 @@
       "y": 1.461,
       "z": 2
     },
-    "_mobility": 0,
+    "_mobility": 1,
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
