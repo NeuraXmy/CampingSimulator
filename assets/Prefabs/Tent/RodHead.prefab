@@ -698,20 +698,20 @@
     "__prefab": {
       "__id__": 33
     },
-    "hoverEnterEvents": [
+    "hoverEnterEvents": [],
+    "hoverStayEvents": [],
+    "hoverExitEvents": [],
+    "selectEnterEvents": [
       {
         "__id__": 34
       }
     ],
-    "hoverStayEvents": [],
-    "hoverExitEvents": [
+    "selectStayEvents": [],
+    "selectExitEvents": [
       {
         "__id__": 35
       }
     ],
-    "selectEnterEvents": [],
-    "selectStayEvents": [],
-    "selectExitEvents": [],
     "activeEnterEvents": [],
     "activeStayEvents": [],
     "activeExitEvents": [],
