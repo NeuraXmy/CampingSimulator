@@ -77,8 +77,8 @@ export class Fastening extends Component {
                     tent.setScale(cover.worldScale.clone());
                     tent.setParent(cover.getParent());
                     
-                    cover.active = false;
-                    this.node.active = false;
+                    cover.destroy();
+                    this.node.destroy();
                 }
             }
         }

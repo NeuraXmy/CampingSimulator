@@ -8,6 +8,9 @@ export class RodHead extends Component {
     @property({type: CCFloat})
     connect_distance: number = 2;
 
+    @property({type: Prefab})
+    full_prefab: Prefab = null;
+
     check(head, tail) {
         let tailpos = tail.worldPosition.clone();
         let headpos = head.worldPosition.clone();
@@ -16,14 +19,11 @@ export class RodHead extends Component {
     }
 
     start() {
-        this.node.getChildByName("RodFull").active = false;
+  
     }
 
     update(deltaTime: number) {
-        let head = this.node.getChildByName("RodHead");
-        let full = this.node.getChildByName("RodFull");
-
-        if(!head.active) return;
+        let head = this.node;
 
         let tails = [...Item.find_nodes(ItemType.RodTail)]
         tails.sort((a, b) => {
@@ -35,13 +35,14 @@ export class RodHead extends Component {
         });
         
         for(let tail of tails) {
-            if(this.check(head, tail)) {
+            if(isValid(tail, true) && this.check(head, tail)) {
                 console.log(this.node.name + " connected to " + tail.name);
-                head.active = false;
-                tail.active = false;
-                full.active = true;
+                let full = instantiate(this.full_prefab);
+                full.parent = head.parent;
                 full.worldPosition = head.worldPosition.clone();
                 full.worldRotation = head.worldRotation.clone();
+                head.destroy();
+                tail.destroy();
                 break;
             }
         }
