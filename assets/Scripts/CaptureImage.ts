@@ -22,7 +22,7 @@ export class CaptureImage extends Component {
     start() {
         if(this.target==null&&this.node!=null)
         this.target = this.node;
-        this.pictureSize.set(1.4,0,0.9);
+        // this.pictureSize.set(1.4,0,0.9);
         this.rt = new RenderTexture();
         this.rt.reset({
             width: view.getVisibleSize().width,
