@@ -777,7 +777,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "e0c8114d-a31d-4086-84af-c9f3011d1b51",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -945,7 +945,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "38210345-ecf6-4b76-a1a5-ba9d08d74ff6",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1113,7 +1113,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@2deab",
+        "__uuid__": "d4069817-d376-485a-b5a8-6e1346b38ab3",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1287,7 +1287,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "38210345-ecf6-4b76-a1a5-ba9d08d74ff6",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1403,7 +1403,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "38210345-ecf6-4b76-a1a5-ba9d08d74ff6",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1456,6 +1456,8 @@
       "__id__": 0
     },
     "fileId": "38t3fIxVJc2ZxP40oS2wqc",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1517,7 +1519,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "38210345-ecf6-4b76-a1a5-ba9d08d74ff6",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1633,7 +1635,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "38210345-ecf6-4b76-a1a5-ba9d08d74ff6",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -1686,6 +1688,8 @@
       "__id__": 0
     },
     "fileId": "d2DvCAx/ZfBIiyxy+g92bZ",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -2155,7 +2159,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "45c494f2-e786-4226-af96-08e79bdc501b",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2208,6 +2212,8 @@
       "__id__": 0
     },
     "fileId": "07dkWc6nBZQJFxrEtam21g",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -2405,7 +2411,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "7820c4c4-5692-4009-9310-dae276d38b90@8d883",
+        "__uuid__": "d4069817-d376-485a-b5a8-6e1346b38ab3",
         "__expectedType__": "cc.Material"
       }
     ],
