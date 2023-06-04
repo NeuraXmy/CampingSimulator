@@ -1,5 +1,6 @@
 import { _decorator, CCFloat, Component, instantiate, isValid, Node, Prefab, Vec3 } from 'cc';
 import { Item, ItemType } from './Item';
+import { RodFull } from './RodFull';
 const { ccclass, property } = _decorator;
 
 @ccclass('Fastening')
@@ -30,7 +31,7 @@ export class Fastening extends Component {
     update(deltaTime: number) {
         let rods = this.node.getChildByName("Rods").children;
         for(let rod of rods) {
-            if(!rod.active) {
+            if(!rod.active && !rod.getComponent(RodFull).hovering) {
                 for(let target of Item.find_nodes(ItemType.RodFull)) if(isValid(target, true)) {
                     let targetpos = target.getWorldPosition().clone();
                     let rodpos = rod.getWorldPosition().clone();
