@@ -1,5 +1,6 @@
 import { _decorator, CCFloat, Component, director, instantiate, isValid, Node, Prefab, Scene, Vec3 } from 'cc';
 import { Item, ItemType } from './Item';
+import { GrabInteractable } from '../../extensions/xr-plugin/assets/xr/component';
 const { ccclass, property } = _decorator;
 
 @ccclass('RodHead')

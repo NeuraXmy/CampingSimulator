@@ -328,6 +328,7 @@
     "fit_height": true,
     "height_offset": -0.1,
     "fit_slope": true,
+    "distance_limit": 1000000000,
     "_id": "7fDTMO44NNxr9qAvfNFvg0"
   },
   {
@@ -630,6 +631,7 @@
     "fit_height": true,
     "height_offset": 0,
     "fit_slope": false,
+    "distance_limit": 1000000000,
     "_id": "2dYLi9Xs5CKIENYU6jjnAW"
   },
   {
@@ -833,6 +835,7 @@
     "fit_height": true,
     "height_offset": 0,
     "fit_slope": false,
+    "distance_limit": 1000000000,
     "_id": "d7A7p0cXBP8J8iCWnSh6qZ"
   },
   {
@@ -970,6 +973,7 @@
     "fit_height": true,
     "height_offset": 0.1,
     "fit_slope": false,
+    "distance_limit": 1000000000,
     "_id": "c0IkbyaPpAWogSrsEmERP5"
   },
   {
@@ -19753,7 +19757,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -6.088,
-      "y": 5.602,
+      "y": 7.341,
       "z": 3.775
     },
     "_lrot": {
