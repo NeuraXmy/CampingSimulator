@@ -19,11 +19,22 @@ export class RodHead extends Component {
         return dist < this.connect_distance;
     }
 
+    private hovering = false;
+
+    public onHoverStart() {
+        this.hovering = true;
+    }
+
+    public onHoverEnd() {
+        this.hovering = false;
+    }
+
     start() {
   
     }
 
     update(deltaTime: number) {
+        if(this.hovering) return;
         let head = this.node;
 
         let tails = [...Item.find_nodes(ItemType.RodTail)]
